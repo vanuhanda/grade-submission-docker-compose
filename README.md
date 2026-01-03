@@ -7,11 +7,11 @@ grade-submission-docker-compose/
 ├── docker-compose.yml
 ├── Dockerfile
 ├── Screenshots/
-│   ├── 1a Grade Submission UI.png
-│   ├── 1b Grade Submission UI.png
-│   ├── 2 Docker Containers Running.png
-│   ├── 3 Docker Compose File.png
-│   └── 4 After EC2 Reboot.png
+    ├── 1a Grade Submission UI.png
+    ├── 1b Grade Submission UI.png
+    ├── 2 Docker Containers Running.png
+    ├── 3 Docker Compose File.png
+    └── 4 After EC2 Reboot.png
 ```
 Screenshots are available in the `Screenshots/` directory for reference.
 
