@@ -154,7 +154,7 @@ The application images are built locally and published to **Docker Hub**, allowi
 Pull image:
 ```bash
 docker pull vanuhanda/grade-submission-api
-
+```
 
 ### Frontend Portal Image
 - **Image:** `vanuhanda/grade-submission-portal`
@@ -164,3 +164,43 @@ docker pull vanuhanda/grade-submission-api
 Pull image:
 ```bash
 docker pull vanuhanda/grade-submission-portal
+```
+## Screenshots Walkthrough
+
+### Application UI – Grade Submission Form
+This screenshot shows the frontend portal running inside a Docker container,
+accessible via the EC2 public IP. User input is submitted to the backend API.
+
+![Grade Submission Form](screenshots/grade-form.png)
+
+---
+
+### Application UI – Stored Grades
+This screenshot confirms successful data persistence.
+Grades submitted via the frontend are stored in MongoDB and retrieved via the backend API.
+
+![Grades View](screenshots/grades-view.png)
+
+---
+
+### Running Docker Containers
+This screenshot shows all application containers running simultaneously,
+confirming successful orchestration using Docker Compose.
+
+![Docker Containers](screenshots/docker-ps.png)
+
+---
+
+### Docker Compose Configuration
+This screenshot shows the `docker-compose.yml` file defining all services,
+networks, environment variables, and volumes.
+
+![Docker Compose File](screenshots/docker-compose.png)
+
+---
+
+### Application State After EC2 Reboot
+This screenshot confirms that the application stack continues to function
+after an EC2 instance reboot, validating container restart behavior and volume persistence.
+
+![After Reboot](screenshots/after-reboot.png)
