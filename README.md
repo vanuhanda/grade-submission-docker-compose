@@ -1,3 +1,19 @@
+# Repo Layout
+
+```
+grade-submission-docker-compose/
+├── README.md
+├── Architecture.yml
+├── Screenshots/
+│   ├── 1a Grade Submission UI.png
+│   ├── 1b Grade Submission UI.png
+│   ├── 2 Docker Containers Running.png
+│   ├── 3 Docker Compose File.png
+│   └── 4 After EC2 Reboot.png
+```
+Screenshots are available in the `Screenshots/` directory for reference.
+
+
 # grade-submission-docker-compose
 Docker Compose–based deployment of a multi-container grade submission application (Frontend, Backend, MongoDB) with persistent storage, running on AWS EC2.
 
@@ -165,45 +181,5 @@ Pull image:
 ```bash
 docker pull vanuhanda/grade-submission-portal
 ```
-## Screenshots Walkthrough
-
-### Application UI – Grade Submission Form
-This screenshot shows the frontend portal running inside a Docker container,
-accessible via the EC2 public IP. User input is submitted to the backend API.
-
-![Grade Submission Form](Screenshots/1a Grade Submission UI.png)
-
----
-
-### Application UI – Stored Grades
-This screenshot confirms successful data persistence.
-Grades submitted via the frontend are stored in MongoDB and retrieved via the backend API.
-
-![Grades View](Screenshots/1b Grade Submission UI.png)
-
----
-
-### Running Docker Containers
-This screenshot shows all application containers running simultaneously,
-confirming successful orchestration using Docker Compose.
-
-![Docker Containers](Screenshots/Docker Containers Running.png)
-
----
-
-### Docker Compose Configuration
-This screenshot shows the `docker-compose.yml` file defining all services,
-networks, environment variables, and volumes.
-
-![Docker Compose File](Screenshots/Docker Compose File.png)
-
----
-
-### Application State After EC2 Reboot
-This screenshot confirms that the application stack continues to function
-after an EC2 instance reboot, validating container restart behavior and volume persistence.
-
-![After Reboot](Screenshots/4 After EC2 Reboot.png)
-
 
 

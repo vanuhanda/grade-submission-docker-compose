@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  flask-app:
+    image: vanuhanda/grade-submission-portal
+    container_name: flask-app
+    ports:
+      - "5001:5001"
+    environment:
+      - GRADE_SERVICE_HOST=node-server
+    depends_on:
+      - node-server
+
+  node-server:
+    image: vanuhanda/grade-submission-api
+    container_name: node-server
+    environment:
+      - DB_HOST=mongo
+      - DB_PORT=27017
+      - DB_NAME=grade_db
+    ports:
+      - "3000:3000"
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=grade_db
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
