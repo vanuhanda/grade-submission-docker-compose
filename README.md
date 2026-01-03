@@ -23,6 +23,12 @@ The project highlights the transition from **manual Docker-based container manag
 
 ---
 
+The following diagram illustrates the Docker Compose–based architecture deployed on AWS EC2:
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0f4178fd-0f3d-4338-a6aa-4605f0f809e4" />
+
+---
+
 ## Manual Docker vs Docker Compose
 
 ### Manual Docker Approach
