@@ -3,7 +3,9 @@
 ```
 grade-submission-docker-compose/
 ├── README.md
-├── Architecture.yml
+├── Architecture.md
+├── docker-compose.yml
+├── Dockerfile
 ├── Screenshots/
 │   ├── 1a Grade Submission UI.png
 │   ├── 1b Grade Submission UI.png
