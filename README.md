@@ -141,3 +141,26 @@ View Logs
 ```bash
 docker-compose logs
 ```
+
+## Docker Images
+
+The application images are built locally and published to **Docker Hub**, allowing the full stack to be deployed without rebuilding images on the target host.
+
+### Backend API Image
+- **Image:** `vanuhanda/grade-submission-api`
+- **Docker Hub:** https://hub.docker.com/r/vanuhanda/grade-submission-api
+- **Description:** Backend REST API responsible for processing grade submissions and interacting with MongoDB.
+
+Pull image:
+```bash
+docker pull vanuhanda/grade-submission-api
+
+
+### Frontend Portal Image
+- **Image:** `vanuhanda/grade-submission-portal`
+- **Docker Hub:** https://hub.docker.com/r/vanuhanda/grade-submission-portal
+- **Description:** Frontend web application providing a user interface for submitting and viewing grades.
+
+Pull image:
+```bash
+docker pull vanuhanda/grade-submission-portal
