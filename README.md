@@ -171,7 +171,7 @@ docker pull vanuhanda/grade-submission-portal
 This screenshot shows the frontend portal running inside a Docker container,
 accessible via the EC2 public IP. User input is submitted to the backend API.
 
-![Grade Submission Form](screenshots/1a Grade Submission UI.png)
+![Grade Submission Form](Screenshots/1a Grade Submission UI.png)
 
 ---
 
@@ -179,7 +179,7 @@ accessible via the EC2 public IP. User input is submitted to the backend API.
 This screenshot confirms successful data persistence.
 Grades submitted via the frontend are stored in MongoDB and retrieved via the backend API.
 
-![Grades View](screenshots/1b Grade Submission UI.png)
+![Grades View](Screenshots/1b Grade Submission UI.png)
 
 ---
 
@@ -187,7 +187,7 @@ Grades submitted via the frontend are stored in MongoDB and retrieved via the ba
 This screenshot shows all application containers running simultaneously,
 confirming successful orchestration using Docker Compose.
 
-![Docker Containers](screenshots/Docker Containers Running.png)
+![Docker Containers](Screenshots/Docker Containers Running.png)
 
 ---
 
@@ -195,7 +195,7 @@ confirming successful orchestration using Docker Compose.
 This screenshot shows the `docker-compose.yml` file defining all services,
 networks, environment variables, and volumes.
 
-![Docker Compose File](screenshots/Docker Compose File.png)
+![Docker Compose File](Screenshots/Docker Compose File.png)
 
 ---
 
@@ -203,4 +203,7 @@ networks, environment variables, and volumes.
 This screenshot confirms that the application stack continues to function
 after an EC2 instance reboot, validating container restart behavior and volume persistence.
 
-![After Reboot](screenshots/4 After EC2 Rebbot.png)
+![After Reboot](Screenshots/4 After EC2 Reboot.png)
+
+
+
