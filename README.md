@@ -6,7 +6,7 @@ grade-submission-docker-compose/
 ├── Architecture.md
 ├── docker-compose.yml
 ├── Dockerfile
-├── Screenshots/
+└── Screenshots/
     ├── 1a Grade Submission UI.png
     ├── 1b Grade Submission UI.png
     ├── 2 Docker Containers Running.png
@@ -184,4 +184,52 @@ Pull image:
 docker pull vanuhanda/grade-submission-portal
 ```
 
+## Screenshots Walkthrough
 
+### Application UI – Grade Submission Form
+This screenshot shows the frontend portal running inside a Docker container,
+accessible via the EC2 public IP. User input is submitted to the backend API.
+
+![alt text](<Screenshots/1a Grade Submission UI.png>)
+
+### Application UI – Stored Grades
+This screenshot confirms successful data persistence.
+Grades submitted via the frontend are stored in MongoDB and retrieved via the backend API.
+
+![alt text](<Screenshots/1b Grade Submission UI.png>)
+
+### Running Docker Containers
+This screenshot shows all application containers running simultaneously,
+confirming successful orchestration using Docker Compose.
+
+![alt text](<Screenshots/2 Docker Containers Running.png>)
+
+### Docker Compose Configuration
+This screenshot shows the `docker-compose.yml` file defining all services,
+networks, environment variables, and volumes.
+
+![alt text](<Screenshots/3 Docker Compose File.png>)
+
+### Application State After EC2 Reboot
+This screenshot confirms that the application stack continues to function
+after an EC2 instance reboot, validating container restart behavior and volume persistence.
+
+![alt text](<Screenshots/4 After EC2 Reboot.png>)
+
+## Execution Flow (Low-Level)
+
+1. Docker Compose pulls pre-built images from Docker Hub
+2. A private Docker network is created automatically
+3. MongoDB container starts and mounts a persistent volume
+4. Backend API container connects to MongoDB using service name
+5. Frontend container connects to backend using service name
+6. User accesses the application via EC2 public IP
+
+## Key Technical Takeaways
+
+- Designed a multi-container application using Docker Compose
+- Implemented service-to-service communication using Docker DNS
+- Used environment variables for configuration decoupling
+- Persisted state using Docker volumes
+- Deployed and validated the stack on AWS EC2
+- Ensured application resilience across instance reboots
