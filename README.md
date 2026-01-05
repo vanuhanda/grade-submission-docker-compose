@@ -5,7 +5,8 @@ grade-submission-docker-compose/
 ├── README.md
 ├── Architecture.md
 ├── docker-compose.yml
-├── Dockerfile
+├── Dockerfile Backend
+├── Dockerfile Frontend
 └── Screenshots/
     ├── 1a Grade Submission UI.png
     ├── 1b Grade Submission UI.png
