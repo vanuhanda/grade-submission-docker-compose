@@ -4,6 +4,7 @@ services:
   flask-app:
     image: vanuhanda/grade-submission-portal
     container_name: flask-app
+    restart: unless-stopped
     ports:
       - "5001:5001"
     environment:
@@ -14,6 +15,7 @@ services:
   node-server:
     image: vanuhanda/grade-submission-api
     container_name: node-server
+    restart: unless-stopped
     environment:
       - DB_HOST=mongo
       - DB_PORT=27017
@@ -24,6 +26,7 @@ services:
   mongo:
     image: mongo
     container_name: mongo
+    restart: unless-stopped
     environment:
       - MONGO_INITDB_DATABASE=grade_db
     volumes:
